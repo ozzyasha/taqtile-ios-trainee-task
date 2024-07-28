@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchFieldView: View {
     @Binding var searchText: String
     @ObservedObject var imageVM: ImageViewModel
+    @FocusState private var searchTextIsFocused: Bool
     
     var body: some View {
         HStack {
@@ -22,11 +23,27 @@ struct SearchFieldView: View {
                     .environment(\.colorScheme, .light)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
+                    .focused($searchTextIsFocused)
+                    .onSubmit {
+                        searchTextIsFocused = false
+                        imageVM.fetchImages(searchText: searchText)
+                    }
+                
+                if !searchText.isEmpty {
+                    Button {
+                        searchText = ""
+                    } label: {
+                        Image(systemName: "x.circle.fill")
+                            .foregroundStyle(.gray)
+                            .padding(.trailing)
+                    }
+                }
             }
             .background(.white)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
             Spacer()
             Button {
+                searchTextIsFocused = false
                 imageVM.fetchImages(searchText: searchText)
             } label: {
                 Text("Поиск")

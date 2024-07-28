@@ -17,76 +17,57 @@ struct ImageViewListCell: View {
     @State private var imageLoaded: Image?
     
     var body: some View {
-        
-        // MARK: - User Info
-        let userImageURL = URL(string: self.image.userImageURL)
-        
-        HStack {
-            AsyncImage(url: userImageURL) { phase in
-                if let image = phase.image {
-                    image
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 50, height: 50)
-                } else if phase.error != nil {
-                    AsyncImage(url: userImageURL) { image in
-                        image
-                            .resizable()
-                            .clipShape(Circle())
-                            .frame(width: 50, height: 50)
-                    } placeholder: {
-                        DefaultUserImageView(size: 50)
+        ZStack {
+            Color.white
+            VStack {
+                // MARK: - User Info
+                let userImageURL = URL(string: self.image.userImageURL)
+                
+                HStack {
+                    AsyncImage(url: userImageURL) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width: 50, height: 50)
+                        } else if phase.error != nil {
+                            AsyncImage(url: userImageURL) { image in
+                                image
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                            } placeholder: {
+                                DefaultUserImageView(size: 50)
+                            }
+                        } else {
+                            DefaultUserImageView(size: 50)
+                        }
                     }
-                } else {
-                    DefaultUserImageView(size: 50)
+                    Text("\(self.image.user)")
+                        .foregroundStyle(.black)
+                    Spacer()
                 }
-            }
-            Text("\(self.image.user)")
-                .foregroundStyle(.black)
-            Spacer()
-        }
-        
-        // MARK: - Image Info
-        
-        let imageURL = URL(string: image.webformatURL)
-        
-        AsyncImage(url: imageURL) { phase in
-            if let image = phase.image {
-                ZStack(alignment: .bottom) {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.black.opacity(0.3), Color.clear]), startPoint: .bottom, endPoint: .top)
-                    HStack {
-                        Image(systemName: "heart")
-                            .foregroundStyle(.white)
-                        Text("\(self.image.likes)")
-                            .foregroundStyle(.white)
-                            .padding(.trailing)
-                        Image(systemName: "message")
-                            .foregroundStyle(.white)
-                        Text("\(self.image.comments)")
-                            .foregroundStyle(.white)
-                            .padding(.trailing)
-                        Image(systemName: "eye")
-                            .foregroundStyle(.white)
-                        Text("\(self.image.views)")
-                            .foregroundStyle(.white)
-                            .padding(.trailing)
-                    }
-                    .padding()
+                .padding()
+                
+                HStack {
+                    Text("Теги: \(self.image.tags)")
+                        .foregroundStyle(.black)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal)
+                    Spacer()
                 }
-                Text("Теги: \(self.image.tags)")
-                    .foregroundStyle(.black)
-                    .multilineTextAlignment(.center)
-            } else if phase.error != nil {
+                
+                // MARK: - Image Info
+                
+                let imageURL = URL(string: image.webformatURL)
+                
                 AsyncImage(url: imageURL) { phase in
                     if let image = phase.image {
                         ZStack(alignment: .bottom) {
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.black.opacity(0.3), Color.clear]), startPoint: .bottom, endPoint: .top)
+                            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.clear, Color.clear]), startPoint: .bottom, endPoint: .top)
                             HStack {
                                 Image(systemName: "heart")
                                     .foregroundStyle(.white)
@@ -106,11 +87,43 @@ struct ImageViewListCell: View {
                             }
                             .padding()
                         }
-                        Text("Теги: \(self.image.tags)")
-                            .foregroundStyle(.black)
-                            .multilineTextAlignment(.center)
                     } else if phase.error != nil {
-                        Text("Failed to load image.")
+                        AsyncImage(url: imageURL) { phase in
+                            if let image = phase.image {
+                                ZStack(alignment: .bottom) {
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.black.opacity(0.3), Color.clear]), startPoint: .bottom, endPoint: .top)
+                                    HStack {
+                                        Image(systemName: "heart")
+                                            .foregroundStyle(.white)
+                                        Text("\(self.image.likes)")
+                                            .foregroundStyle(.white)
+                                            .padding(.trailing)
+                                        Image(systemName: "message")
+                                            .foregroundStyle(.white)
+                                        Text("\(self.image.comments)")
+                                            .foregroundStyle(.white)
+                                            .padding(.trailing)
+                                        Image(systemName: "eye")
+                                            .foregroundStyle(.white)
+                                        Text("\(self.image.views)")
+                                            .foregroundStyle(.white)
+                                            .padding(.trailing)
+                                    }
+                                    .padding()
+                                }
+                            } else if phase.error != nil {
+                                Text("Failed to load image.")
+                            } else {
+                                ZStack {
+                                    Color.gray.opacity(0.2)
+                                    ProgressView()
+                                        .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                                }
+                            }
+                        }
                     } else {
                         ZStack {
                             Color.gray.opacity(0.2)
@@ -119,17 +132,9 @@ struct ImageViewListCell: View {
                         }
                     }
                 }
-            } else {
-                ZStack {
-                    Color.gray.opacity(0.2)
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                }
             }
         }
-        .fixedSize()
-        
-        Divider()
+        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
     }
     
 }
