@@ -27,8 +27,7 @@ struct SearchFieldView: View {
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
             Spacer()
             Button {
-                let query = searchText.replacingOccurrences(of: " ", with: "+").lowercased()
-                imageVM.fetchImages(searchText: query)
+                imageVM.fetchImages(searchText: searchText)
             } label: {
                 Text("Поиск")
                     .foregroundStyle(.white)

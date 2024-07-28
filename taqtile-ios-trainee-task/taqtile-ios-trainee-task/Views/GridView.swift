@@ -26,7 +26,7 @@ struct GridView: View {
                       pinnedViews: [.sectionHeaders, .sectionFooters]
             ) {
                 ForEach(imageVM.imageCatalogueModel, id: \.id) { image in
-                    ImageViewListCell(image: image)
+                    ImageViewGridCell(image: image)
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                 }

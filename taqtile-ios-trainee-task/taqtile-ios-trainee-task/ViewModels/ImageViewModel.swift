@@ -17,7 +17,7 @@ class ImageViewModel: ObservableObject {
     var showAlert = false
     
     func fetchImages(searchText: String) {
-        APIService.shared.fetchData(searchText: searchText, completionHandler: { imageCatalogue in
+        APIService.shared.fetchData(searchText: searchText.replacingOccurrences(of: " ", with: "+").lowercased(), completionHandler: { imageCatalogue in
             DispatchQueue.main.async {
                 self.imageCatalogueModel = imageCatalogue.hits
             }

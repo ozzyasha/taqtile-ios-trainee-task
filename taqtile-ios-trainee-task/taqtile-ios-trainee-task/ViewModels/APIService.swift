@@ -14,7 +14,7 @@ class APIService {
     
     private enum Constants {
         static let baseURL = "https://pixabay.com/api/"
-        static let apiKey = "YOUR-API-KEY"
+        static let apiKey = "YOUR_API_KEY"
         static let imageType = "photo"
     }
     
