@@ -9,12 +9,9 @@ import Foundation
 
 class ImageViewModel: ObservableObject {
     
-    @Published
-    var imageCatalogueModel = [ImageCatalogueModel.Hit]()
-    @Published
-    var errorMessage = ""
-    @Published
-    var showAlert = false
+    @Published var imageCatalogueModel = [ImageCatalogueModel.Hit]()
+    @Published var errorMessage = ""
+    @Published var showAlert = false
     
     func fetchImages(searchText: String) {
         APIService.shared.fetchData(searchText: searchText.replacingOccurrences(of: " ", with: "+").lowercased(), completionHandler: { imageCatalogue in

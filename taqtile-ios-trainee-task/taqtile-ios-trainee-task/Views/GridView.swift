@@ -9,8 +9,7 @@ import SwiftUI
 
 struct GridView: View {
     
-    @ObservedObject
-    var imageVM: ImageViewModel
+    @ObservedObject var imageVM: ImageViewModel
     @State private var columns: [GridItem] = [
         GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),
         GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),

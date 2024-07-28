@@ -15,88 +15,127 @@ struct ImageViewGridCell: View {
     }
     
     var body: some View {
-        AsyncImage(url: URL(string: image.webformatURL)) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Spacer()
-            AsyncImage(url: URL(string: self.image.userImageURL)) { image in
-                HStack {
-                    image
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 30, height: 30)
-                    Text("\(self.image.user)")
-                        .foregroundStyle(.black)
-                        .font(.system(size: 12))
-                    Spacer()
-                }
-            } placeholder: {
-                HStack {
-                    ZStack {
-                        Circle().frame(width: 30, height: 30)
-                            .foregroundStyle(Color.gray)
-                        Image(systemName: "person.fill")
+        ZStack {
+            Color.white
+            VStack {
+                // MARK: - Image View
+                let imageURL = URL(string: image.webformatURL)
+                
+                AsyncImage(url: imageURL) { phase in
+                    if let image = phase.image {
+                        image
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                            .foregroundStyle(.white)
-                            .offset(x: 0, y: 5)
+                            .aspectRatio(contentMode: .fit)
+                    } else if phase.error != nil {
+                        AsyncImage(url: imageURL) { phase in
+                            if let image = phase.image {
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            } else if phase.error != nil {
+                                ZStack {
+                                    Color.gray.opacity(0.2)
+                                    Text("Failed to load image.")
+                                }
+                            } else {
+                                ZStack {
+                                    Color.gray.opacity(0.2)
+                                    ProgressView()
+                                        .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                                }
+                            }
+                        }
+                    } else {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.2))
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                        }
                     }
-                    .clipShape(Circle())
+                }
+                
+                Spacer()
+                
+                // MARK: - User Info
+                let userImageURL = URL(string: self.image.userImageURL)
+                
+                HStack {
+                    AsyncImage(url: userImageURL) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width: 30, height: 30)
+                        } else if phase.error != nil {
+                            AsyncImage(url: userImageURL) { phase in
+                                if let image = phase.image {
+                                    image
+                                        .resizable()
+                                        .clipShape(Circle())
+                                        .frame(width: 30, height: 30)
+                                } else if phase.error != nil {
+                                    DefaultUserImageView(size: 30)
+                                } else {
+                                    DefaultUserImageView(size: 30)
+                                }
+                            }
+                        } else {
+                            DefaultUserImageView(size: 30)
+                        }
+                    }
+                    
                     Text("\(self.image.user)")
                         .foregroundStyle(.black)
                         .font(.system(size: 12))
                     Spacer()
                 }
-            }
-            HStack(alignment: .bottom) {
-                VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "heart.circle.fill")
-                            .foregroundStyle(.black)
-                            .frame(width: 10, height: 10)
-                            .scaledToFit()
-                        Text("\(self.image.likes)")
-                            .foregroundStyle(.black)
-                            .font(.system(size: 12))
-                            .padding(.trailing)
+                .padding(.horizontal)
+                
+                Divider()
+                
+                // MARK: - Image Info
+                
+                HStack(alignment: .bottom) {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Image(systemName: "heart.circle.fill")
+                                .foregroundStyle(.red)
+                                .frame(width: 10, height: 10)
+                                .scaledToFit()
+                            Text("\(self.image.likes)")
+                                .foregroundStyle(.black)
+                                .font(.system(size: 10))
+                        }
+                        HStack {
+                            Image(systemName: "message.circle.fill")
+                                .foregroundStyle(.green)
+                                .frame(width: 10, height: 10)
+                                .scaledToFit()
+                            Text("\(self.image.comments)")
+                                .foregroundStyle(.black)
+                                .font(.system(size: 10))
+                        }
+                        HStack {
+                            Image(systemName: "eye.circle.fill")
+                                .foregroundStyle(.blue)
+                                .frame(width: 10, height: 10)
+                                .scaledToFit()
+                            Text("\(self.image.views)")
+                                .foregroundStyle(.black)
+                                .font(.system(size: 10))
+                        }
                     }
-                    HStack {
-                        Image(systemName: "message.circle.fill")
-                            .foregroundStyle(.black)
-                            .frame(width: 10, height: 10)
-                            .scaledToFit()
-                        Text("\(self.image.comments)")
-                            .foregroundStyle(.black)
-                            .font(.system(size: 12))
-                            .padding(.trailing)
-                    }
-                    HStack {
-                        Image(systemName: "eye.circle.fill")
-                            .foregroundStyle(.black)
-                            .frame(width: 10, height: 10)
-                            .scaledToFit()
-                        Text("\(self.image.views)")
-                            .foregroundStyle(.black)
-                            .font(.system(size: 12))
-                    }
+                    Spacer()
+                    Text("\(self.image.tags.replacingOccurrences(of: ",", with: "\n"))")
+                        .foregroundStyle(.gray)
+                        .font(.system(size: 10))
+                        .multilineTextAlignment(.trailing)
                 }
-                .padding(.leading, 5)
-                Spacer()
-                Text("Теги:\n\(self.image.tags.replacingOccurrences(of: ",", with: "\n"))")
-                    .foregroundStyle(.black)
-                    .font(.system(size: 12))
-                    .multilineTextAlignment(.trailing)
-            }
-        } placeholder: {
-            ZStack {
-                Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                .padding()
             }
         }
+        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
     }
 }
 

@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    @ObservedObject
-    var imageVM: ImageViewModel
+    @ObservedObject var imageVM: ImageViewModel
     @State private var showAlert = false
     @State private var alertMessage = ""
     
