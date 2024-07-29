@@ -10,8 +10,6 @@ import SwiftUI
 struct ListView: View {
     
     @ObservedObject var imageVM: ImageViewModel
-    @State private var showAlert = false
-    @State private var alertMessage = ""
     
     var body: some View {
         List(imageVM.imageCatalogueModel, id: \.id) { image in
@@ -21,8 +19,8 @@ struct ListView: View {
         }
         .listStyle(.plain)
         .background(Color(.systemGray5))
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Ошибка"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        .alert(imageVM.errorMessage, isPresented: $imageVM.showAlert) {
+            Button("OK", role: .cancel) { }
         }
     }
     

@@ -17,6 +17,7 @@
 		7A3E83E82C53DE4400647F83 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E72C53DE4400647F83 /* APIService.swift */; };
 		7A3E83EA2C53DEEA00647F83 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E92C53DEEA00647F83 /* APIError.swift */; };
 		7A3E83EE2C53E68600647F83 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83ED2C53E68600647F83 /* ImageViewModel.swift */; };
+		7A4613182C57DDB9007865CD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7A4613172C57DDB9007865CD /* Localizable.xcstrings */; };
 		7A9130D12C554C1900137CCE /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130D02C554C1900137CCE /* ListView.swift */; };
 		7A9130D62C554E4A00137CCE /* ImageViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130D52C554E4A00137CCE /* ImageViewListCell.swift */; };
 		7A9130DB2C5584CE00137CCE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130DA2C5584CE00137CCE /* GridView.swift */; };
@@ -36,6 +37,7 @@
 		7A3E83E72C53DE4400647F83 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7A3E83E92C53DEEA00647F83 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7A3E83ED2C53E68600647F83 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		7A4613172C57DDB9007865CD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7A9130D02C554C1900137CCE /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7A9130D52C554E4A00137CCE /* ImageViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewListCell.swift; sourceTree = "<group>"; };
 		7A9130DA2C5584CE00137CCE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				7A3E83E32C53D81B00647F83 /* ViewModels */,
 				7A3E83D62C539ADF00647F83 /* Assets.xcassets */,
 				7A0661692C57AA79007BF104 /* config.plist */,
+				7A4613172C57DDB9007865CD /* Localizable.xcstrings */,
 				7A3E83D82C539ADF00647F83 /* Preview Content */,
 			);
 			path = "taqtile-ios-trainee-task";
@@ -176,6 +179,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 7A3E83C62C539AD800647F83;
 			packageReferences = (
@@ -196,6 +200,7 @@
 			files = (
 				7A3E83DA2C539ADF00647F83 /* Preview Assets.xcassets in Resources */,
 				7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */,
+				7A4613182C57DDB9007865CD /* Localizable.xcstrings in Resources */,
 				7A06616A2C57AA79007BF104 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

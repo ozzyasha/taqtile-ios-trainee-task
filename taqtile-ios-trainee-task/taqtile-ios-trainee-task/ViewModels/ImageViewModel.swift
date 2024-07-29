@@ -32,7 +32,7 @@ class ImageViewModel: ObservableObject {
         if let url = URL(string: imageURL) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 guard let imageData = data else {
-                    errorCompletion("Ошибка загрузки изображения: \(error?.localizedDescription ?? "undefined error")")
+                    errorCompletion(String(localized: "Ошибка загрузки изображения: \(error?.localizedDescription ?? "undefined error")"))
                     return
                 }
                 PHPhotoLibrary.requestAuthorization { status in
@@ -41,13 +41,13 @@ class ImageViewModel: ObservableObject {
                         case .authorized:
                             dataCompletion(imageData)
                         case .denied, .restricted:
-                            errorCompletion("Доступ к фотогалерее запрещен. Вы можете изменить настройки доступа в настройках приложения.")
+                            errorCompletion(String(localized: "Доступ к фотогалерее запрещен. Вы можете изменить настройки доступа в настройках приложения"))
                             self.showSaveImageErrorAlert = true
                         case .notDetermined:
-                            errorCompletion("Доступ к фотогалерее еще не запрошен")
+                            errorCompletion(String(localized: "Доступ к фотогалерее еще не запрошен"))
                             self.showSaveImageErrorAlert = true
                         default:
-                            errorCompletion("Неизвестный статус")
+                            errorCompletion(String(localized: "Неизвестный статус"))
                             self.showSaveImageErrorAlert = true
                         }
                     }

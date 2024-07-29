@@ -14,8 +14,6 @@ struct GridView: View {
         GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),
         GridItem(.flexible(minimum: 120, maximum: 180), spacing: 10),
     ]
-    @State private var showAlert = false
-    @State private var alertMessage = ""
     
     var body: some View {
         ScrollView {
@@ -31,8 +29,8 @@ struct GridView: View {
                 }
             }
             .frame(maxHeight: .infinity)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Ошибка"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .alert(imageVM.errorMessage, isPresented: $imageVM.showAlert) {
+                Button("OK", role: .cancel) { }
             }
         }
     }
