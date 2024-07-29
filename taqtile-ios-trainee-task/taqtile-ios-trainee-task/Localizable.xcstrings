@@ -28,7 +28,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@"
+            "value" : "%lld"
           }
         }
       }
