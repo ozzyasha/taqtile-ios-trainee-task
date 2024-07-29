@@ -133,3 +133,6 @@ xcuserdata
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### Config file with API key ###
+taqtile-ios-trainee-task/taqtile-ios-trainee-task/config.plist
