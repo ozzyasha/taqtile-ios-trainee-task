@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ImageViewListCell: View {
     @State var image: ImageCatalogueModel.Hit
+    @State private var showSaveAlert = false
+    @State private var errorMessage = ""
+    @ObservedObject private var imageVM = ImageViewModel()
     
     private enum Constants {
         static let imageWidth: CGFloat = 200
@@ -132,9 +135,26 @@ struct ImageViewListCell: View {
                         }
                     }
                 }
+                .onTapGesture {
+                    showSaveAlert = true
+                }
             }
         }
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+        .alert("Сохранить картинку?", isPresented: $showSaveAlert) {
+            Button("Сохранить") {
+                imageVM.saveImageToGallery(imageURL: image.webformatURL, dataCompletion: { data in
+                    UIImageWriteToSavedPhotosAlbum(UIImage(data: data)!, nil, nil, nil)
+                }, errorCompletion: { errorText in
+                    errorMessage = errorText
+                })
+                
+            }
+            Button("Отмена", role: .cancel) {}
+        }
+        .alert(errorMessage, isPresented: $imageVM.showSaveImageErrorAlert) {
+            Button("OK", role: .cancel) {}
+        }
     }
     
 }
