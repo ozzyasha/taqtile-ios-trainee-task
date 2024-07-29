@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A3E83D32C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */; };
+		7A3E83D52C539AD800647F83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D42C539AD800647F83 /* ContentView.swift */; };
+		7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3E83D62C539ADF00647F83 /* Assets.xcassets */; };
+		7A3E83DA2C539ADF00647F83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3E83D92C539ADF00647F83 /* Preview Assets.xcassets */; };
+		7A3E83E22C53CBB000647F83 /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E12C53CBB000647F83 /* SearchFieldView.swift */; };
+		7A3E83E62C53DBDD00647F83 /* ImageCatalogueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E52C53DBDD00647F83 /* ImageCatalogueModel.swift */; };
+		7A3E83E82C53DE4400647F83 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E72C53DE4400647F83 /* APIService.swift */; };
+		7A3E83EA2C53DEEA00647F83 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83E92C53DEEA00647F83 /* APIError.swift */; };
+		7A3E83EE2C53E68600647F83 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83ED2C53E68600647F83 /* ImageViewModel.swift */; };
+		7A9130D12C554C1900137CCE /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130D02C554C1900137CCE /* ListView.swift */; };
+		7A9130D62C554E4A00137CCE /* ImageViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130D52C554E4A00137CCE /* ImageViewListCell.swift */; };
+		7A9130DB2C5584CE00137CCE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130DA2C5584CE00137CCE /* GridView.swift */; };
+		7A9130DD2C55B3C800137CCE /* ImageViewGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130DC2C55B3C800137CCE /* ImageViewGridCell.swift */; };
+		7A9130E32C56957900137CCE /* DefaultUserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130E22C56957900137CCE /* DefaultUserImageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A3E83CF2C539AD800647F83 /* taqtile-ios-trainee-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taqtile-ios-trainee-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taqtile_ios_trainee_taskApp.swift; sourceTree = "<group>"; };
+		7A3E83D42C539AD800647F83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A3E83D62C539ADF00647F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A3E83D92C539ADF00647F83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A3E83E12C53CBB000647F83 /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		7A3E83E52C53DBDD00647F83 /* ImageCatalogueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCatalogueModel.swift; sourceTree = "<group>"; };
+		7A3E83E72C53DE4400647F83 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7A3E83E92C53DEEA00647F83 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7A3E83ED2C53E68600647F83 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		7A9130D02C554C1900137CCE /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		7A9130D52C554E4A00137CCE /* ImageViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewListCell.swift; sourceTree = "<group>"; };
+		7A9130DA2C5584CE00137CCE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		7A9130DC2C55B3C800137CCE /* ImageViewGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewGridCell.swift; sourceTree = "<group>"; };
+		7A9130E22C56957900137CCE /* DefaultUserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserImageView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A3E83CC2C539AD800647F83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A3E83C62C539AD800647F83 = {
+			isa = PBXGroup;
+			children = (
+				7A3E83D12C539AD800647F83 /* taqtile-ios-trainee-task */,
+				7A3E83D02C539AD800647F83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A3E83D02C539AD800647F83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83CF2C539AD800647F83 /* taqtile-ios-trainee-task.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A3E83D12C539AD800647F83 /* taqtile-ios-trainee-task */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */,
+				7A3E83E42C53D83700647F83 /* Models */,
+				7A3E83E02C53C1FE00647F83 /* Views */,
+				7A3E83E32C53D81B00647F83 /* ViewModels */,
+				7A3E83D62C539ADF00647F83 /* Assets.xcassets */,
+				7A3E83D82C539ADF00647F83 /* Preview Content */,
+			);
+			path = "taqtile-ios-trainee-task";
+			sourceTree = "<group>";
+		};
+		7A3E83D82C539ADF00647F83 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83D92C539ADF00647F83 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A3E83E02C53C1FE00647F83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83D42C539AD800647F83 /* ContentView.swift */,
+				7A3E83E12C53CBB000647F83 /* SearchFieldView.swift */,
+				7A9130D02C554C1900137CCE /* ListView.swift */,
+				7A9130DA2C5584CE00137CCE /* GridView.swift */,
+				7A9130D42C554E0100137CCE /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A3E83E32C53D81B00647F83 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83E72C53DE4400647F83 /* APIService.swift */,
+				7A3E83ED2C53E68600647F83 /* ImageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7A3E83E42C53D83700647F83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E83E52C53DBDD00647F83 /* ImageCatalogueModel.swift */,
+				7A3E83E92C53DEEA00647F83 /* APIError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A9130D42C554E0100137CCE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7A9130DC2C55B3C800137CCE /* ImageViewGridCell.swift */,
+				7A9130D52C554E4A00137CCE /* ImageViewListCell.swift */,
+				7A9130E22C56957900137CCE /* DefaultUserImageView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A3E83CE2C539AD800647F83 /* taqtile-ios-trainee-task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A3E83DD2C539ADF00647F83 /* Build configuration list for PBXNativeTarget "taqtile-ios-trainee-task" */;
+			buildPhases = (
+				7A3E83CB2C539AD800647F83 /* Sources */,
+				7A3E83CC2C539AD800647F83 /* Frameworks */,
+				7A3E83CD2C539AD800647F83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "taqtile-ios-trainee-task";
+			packageProductDependencies = (
+			);
+			productName = "taqtile-ios-trainee-task";
+			productReference = 7A3E83CF2C539AD800647F83 /* taqtile-ios-trainee-task.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A3E83C72C539AD800647F83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7A3E83CE2C539AD800647F83 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 7A3E83CA2C539AD800647F83 /* Build configuration list for PBXProject "taqtile-ios-trainee-task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A3E83C62C539AD800647F83;
+			packageReferences = (
+			);
+			productRefGroup = 7A3E83D02C539AD800647F83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A3E83CE2C539AD800647F83 /* taqtile-ios-trainee-task */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A3E83CD2C539AD800647F83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3E83DA2C539ADF00647F83 /* Preview Assets.xcassets in Resources */,
+				7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A3E83CB2C539AD800647F83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A9130D12C554C1900137CCE /* ListView.swift in Sources */,
+				7A3E83D52C539AD800647F83 /* ContentView.swift in Sources */,
+				7A3E83E82C53DE4400647F83 /* APIService.swift in Sources */,
+				7A9130E32C56957900137CCE /* DefaultUserImageView.swift in Sources */,
+				7A9130DD2C55B3C800137CCE /* ImageViewGridCell.swift in Sources */,
+				7A3E83E62C53DBDD00647F83 /* ImageCatalogueModel.swift in Sources */,
+				7A3E83D32C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift in Sources */,
+				7A9130D62C554E4A00137CCE /* ImageViewListCell.swift in Sources */,
+				7A3E83E22C53CBB000647F83 /* SearchFieldView.swift in Sources */,
+				7A3E83EE2C53E68600647F83 /* ImageViewModel.swift in Sources */,
+				7A9130DB2C5584CE00137CCE /* GridView.swift in Sources */,
+				7A3E83EA2C53DEEA00647F83 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7A3E83DB2C539ADF00647F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A3E83DC2C539ADF00647F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A3E83DE2C539ADF00647F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"taqtile-ios-trainee-task/Preview Content\"";
+				DEVELOPMENT_TEAM = BLSN95DCGL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.taqtile-ios-trainee-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A3E83DF2C539ADF00647F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"taqtile-ios-trainee-task/Preview Content\"";
+				DEVELOPMENT_TEAM = BLSN95DCGL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.taqtile-ios-trainee-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A3E83CA2C539AD800647F83 /* Build configuration list for PBXProject "taqtile-ios-trainee-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3E83DB2C539ADF00647F83 /* Debug */,
+				7A3E83DC2C539ADF00647F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A3E83DD2C539ADF00647F83 /* Build configuration list for PBXNativeTarget "taqtile-ios-trainee-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A3E83DE2C539ADF00647F83 /* Debug */,
+				7A3E83DF2C539ADF00647F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A3E83C72C539AD800647F83 /* Project object */;
+}
