@@ -14,12 +14,20 @@ class APIService {
     
     private enum Constants {
         static let baseURL = "https://pixabay.com/api/"
-        static let apiKey = "YOUR_API_KEY"
         static let imageType = "photo"
     }
     
+    func receiveApiKey() -> String {
+        let configFilePath = Bundle.main.path(forResource: "config", ofType: "plist")
+        let configDictionary = NSDictionary(contentsOfFile: configFilePath ?? "key path error")
+        guard let apiKey = configDictionary?.value(forKey: "APIKey") as? String else {
+            return "key receiving error"
+        }
+        return apiKey
+    }
+    
     func fetchData(searchText: String, completionHandler: ((ImageCatalogueModel) -> ())? = nil, errorHandler: ((APIError) -> ())? = nil) {
-        let imagesURL = "\(Constants.baseURL)?key=\(Constants.apiKey)&q=\(searchText)&image_type=\(Constants.imageType)"
+        let imagesURL = "\(Constants.baseURL)?key=\(receiveApiKey())&q=\(searchText)&image_type=\(Constants.imageType)"
         
         DispatchQueue.global().async {
             guard let url = URL(string: imagesURL) else {

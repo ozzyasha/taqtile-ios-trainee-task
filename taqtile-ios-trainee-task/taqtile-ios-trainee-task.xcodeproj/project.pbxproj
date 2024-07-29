@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A06616A2C57AA79007BF104 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A0661692C57AA79007BF104 /* config.plist */; };
 		7A3E83D32C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */; };
 		7A3E83D52C539AD800647F83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D42C539AD800647F83 /* ContentView.swift */; };
 		7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3E83D62C539ADF00647F83 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A0661692C57AA79007BF104 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		7A3E83CF2C539AD800647F83 /* taqtile-ios-trainee-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taqtile-ios-trainee-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taqtile_ios_trainee_taskApp.swift; sourceTree = "<group>"; };
 		7A3E83D42C539AD800647F83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				7A3E83E02C53C1FE00647F83 /* Views */,
 				7A3E83E32C53D81B00647F83 /* ViewModels */,
 				7A3E83D62C539ADF00647F83 /* Assets.xcassets */,
+				7A0661692C57AA79007BF104 /* config.plist */,
 				7A3E83D82C539ADF00647F83 /* Preview Content */,
 			);
 			path = "taqtile-ios-trainee-task";
@@ -193,6 +196,7 @@
 			files = (
 				7A3E83DA2C539ADF00647F83 /* Preview Assets.xcassets in Resources */,
 				7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */,
+				7A06616A2C57AA79007BF104 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
