@@ -11,47 +11,68 @@ struct SearchFieldView: View {
     @Binding var searchText: String
     @ObservedObject var imageVM: ImageViewModel
     @FocusState private var searchTextIsFocused: Bool
+    @State private var errorText = ""
     
     var body: some View {
-        HStack {
+        VStack {
             HStack {
-                Image(systemName: "magnifyingglass")
-                    .padding(.leading)
-                    .foregroundStyle(.gray)
-                TextField("Поиск", text: $searchText)
-                    .padding()
-                    .environment(\.colorScheme, .light)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .focused($searchTextIsFocused)
-                    .onSubmit {
-                        searchTextIsFocused = false
-                        imageVM.fetchImages(searchText: searchText)
-                    }
-                
-                if !searchText.isEmpty {
-                    Button {
-                        searchText = ""
-                    } label: {
-                        Image(systemName: "x.circle.fill")
-                            .foregroundStyle(.gray)
-                            .padding(.trailing)
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .padding(.leading)
+                        .foregroundStyle(.gray)
+                    TextField("Поиск", text: $searchText)
+                        .padding()
+                        .environment(\.colorScheme, .light)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        .focused($searchTextIsFocused)
+                        .onSubmit {
+                            guard !searchText.isEmpty else {
+                                errorText = String(localized: "Search field should not be empty")
+                                return
+                            }
+                            searchTextIsFocused = false
+                            imageVM.fetchImages(searchText: searchText)
+                        }
+                        .onChange(of: searchText) {
+                            if !searchText.isEmpty {
+                                errorText = ""
+                            }
+                        }
+                    
+                    if !searchText.isEmpty {
+                        Button {
+                            searchText = ""
+                        } label: {
+                            Image(systemName: "x.circle.fill")
+                                .foregroundStyle(.gray)
+                                .padding(.trailing)
+                        }
                     }
                 }
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
+                Spacer()
+                Button {
+                    guard !searchText.isEmpty else {
+                        errorText = String(localized: "Search field should not be empty")
+                        return
+                    }
+                    searchTextIsFocused = false
+                    imageVM.fetchImages(searchText: searchText)
+                } label: {
+                    Text("Поиск")
+                        .foregroundStyle(.white)
+                        .padding()
+                }
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
             }
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
-            Spacer()
-            Button {
-                searchTextIsFocused = false
-                imageVM.fetchImages(searchText: searchText)
-            } label: {
-                Text("Поиск")
-                    .foregroundStyle(.white)
-                    .padding()
+            HStack {
+                Text(errorText)
+                    .foregroundStyle(.red)
+                Spacer()
             }
-            .background(.blue)
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 15)))
         }
         .padding()
         .background(Color(.systemGray5))

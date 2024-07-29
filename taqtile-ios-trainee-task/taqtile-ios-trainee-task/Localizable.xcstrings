@@ -113,6 +113,16 @@
         }
       }
     },
+    "Search field should not be empty" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поле поиска не должно быть пустым"
+          }
+        }
+      }
+    },
     "URL error" : {
       "localizations" : {
         "en" : {
