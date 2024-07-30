@@ -24,16 +24,15 @@
 - Быстрый поиск изображений по картинке, повторная загрузка картинки при неудачной попытке первой загрузки;
 - Возможность переключения между режимам просмотра картинок: в виде списка либо в виде сетки;
 - Поиск по нескольким словам;
-- Возможность сохранения картинки в галерею.
+- Возможность сохранения картинки в галерею по нажатию на неё.
 - Интуитивно понятный и простой интерфейс с поддержкой тёмной версии;
 - Локализация приложения (русский и английский язык приложения).
 
 Скриншоты:
 
-![1](https://github.com/user-attachments/assets/398fec64-dfb1-4262-9dc2-16410b8f7002)
-![2](https://github.com/user-attachments/assets/1bfeeb24-b78d-4825-9e65-068cc114e257)
-![3](https://github.com/user-attachments/assets/1496cc42-553c-4a52-b00a-2fdbd80167f7)
-![4](https://github.com/user-attachments/assets/7908e2a1-d717-4d6f-9c7a-9775bdc4e3b8)
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/38720347-5ba2-466b-a70d-30e4575efb42">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/8ea24991-f0ee-4f1e-bb15-c68e56616371">
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/fe1206ed-f79e-4510-88ee-7917c6dcdeb3">
 
 
 ## Инструкция по сборке и запуску приложения:
