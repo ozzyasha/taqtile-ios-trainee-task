@@ -30,9 +30,9 @@
 
 Скриншоты:
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/38720347-5ba2-466b-a70d-30e4575efb42">
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/8ea24991-f0ee-4f1e-bb15-c68e56616371">
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/fe1206ed-f79e-4510-88ee-7917c6dcdeb3">
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/38720347-5ba2-466b-a70d-30e4575efb42">
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/8ea24991-f0ee-4f1e-bb15-c68e56616371">
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/fe1206ed-f79e-4510-88ee-7917c6dcdeb3">
 
 
 ## Инструкция по сборке и запуску приложения:
