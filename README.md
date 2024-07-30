@@ -24,9 +24,17 @@
 - Быстрый поиск изображений по картинке, повторная загрузка картинки при неудачной попытке первой загрузки;
 - Возможность переключения между режимам просмотра картинок: в виде списка либо в виде сетки;
 - Поиск по нескольким словам;
-- Интуитивно понятный и простой интерфейс;
-- Локализация приложения (русский и английский язык приложения);
 - Возможность сохранения картинки в галерею.
+- Интуитивно понятный и простой интерфейс с поддержкой тёмной версии;
+- Локализация приложения (русский и английский язык приложения).
+
+Скриншоты:
+
+![1](https://github.com/user-attachments/assets/398fec64-dfb1-4262-9dc2-16410b8f7002)
+![2](https://github.com/user-attachments/assets/1bfeeb24-b78d-4825-9e65-068cc114e257)
+![3](https://github.com/user-attachments/assets/1496cc42-553c-4a52-b00a-2fdbd80167f7)
+![4](https://github.com/user-attachments/assets/7908e2a1-d717-4d6f-9c7a-9775bdc4e3b8)
+
 
 ## Инструкция по сборке и запуску приложения:
 ### Требования:
@@ -38,20 +46,28 @@
 ### 2. Открытие проекта в Xcode
 Откройте Xcode и выберите "File" -> "Open..." (либо нажмите сочетание клавиш `⌘O`), далее перейдите в директорию репозитория 
 
-### 3. Создание файла config.plist для настройки получения API ключа
+### 3. Использование API ключа
 Приложение работает с использованием публичного API сайта Pixabay, свой API ключ можно получить при регистрации, подробная информация о работе API и получении ключа [доступна по ссылке](https://pixabay.com/api/docs/).
-- После получения ключа необходимо создать файл `config.plist` в Xcode следующего вида, вместо "YOUR_API_KEY" ввести свой API ключ, полученный при регистрации на сайте Pixabay:
+
+- После получения ключа необходимо редактировать файл `config.plist` в папке проекта, вместо "YOUR_API_KEY" ввести свой API ключ, полученный при регистрации на сайте Pixabay:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
     <key>APIKey</key>
-    <string>YOUR_API_KEY</string>
+    <string>YOUR_API_KEY</string> // вводим здесь свой ключ
 </dict>
 </plist>
+
 ```
-- Либо нажать в левом нижнем углу в Xcode "+", выбрать "File..." ("Файл...")    
+Либо замените ключ в Xcode в файле проекта:
+<img width="714" alt="image" src="https://github.com/user-attachments/assets/752699b7-ef5e-4be5-8da0-43256a424aef">
+
+<details>
+<summary> Создание собственного файла config.plist (если есть необходимость) </summary>
+
+- Нажать в левом нижнем углу в Xcode "+", выбрать "File..." ("Файл...")    
 <img width="270" alt="image" src="https://github.com/user-attachments/assets/3f8d67af-b4fb-40a8-95ef-75f3f00cb225">
 
 - Затем выбрать "Property List" и создать его в проекте с именем "config"    
@@ -60,10 +76,12 @@
 - Настроить config.plist как показано на скриншоте ниже, вместо "YOUR_API_KEY" ввести свой API ключ, полученный при регистрации на сайте Pixabay    
 <img width="714" alt="image" src="https://github.com/user-attachments/assets/752699b7-ef5e-4be5-8da0-43256a424aef">
 
+</details>
+
 ### 4. Запуск проекта
 
 - Выберите симулятор устройства (iPhone или iPad) в меню Xcode.    
 <img width="316" alt="image" src="https://github.com/user-attachments/assets/4c1f6549-eba5-4de8-8a96-6f8f555fdcfa">
 
-- Нажмите кнопку "Play" в верхней левой части Xcode, чтобы запустить приложение.    
+- Нажмите кнопку Run в верхней левой части Xcode, чтобы запустить приложение (либо используйте сочетание клавиш `⌘R`).    
 <img width="305" alt="image" src="https://github.com/user-attachments/assets/46c22747-095e-4a59-bec0-91cc5b30542d">

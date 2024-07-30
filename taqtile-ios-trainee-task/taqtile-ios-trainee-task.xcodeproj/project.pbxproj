@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3184CD2C58D6A0004946E2 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A3184CC2C58D6A0004946E2 /* config.plist */; };
 		7A3E83D32C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */; };
 		7A3E83D52C539AD800647F83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E83D42C539AD800647F83 /* ContentView.swift */; };
 		7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3E83D62C539ADF00647F83 /* Assets.xcassets */; };
@@ -22,10 +23,10 @@
 		7A9130DB2C5584CE00137CCE /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130DA2C5584CE00137CCE /* GridView.swift */; };
 		7A9130DD2C55B3C800137CCE /* ImageViewGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130DC2C55B3C800137CCE /* ImageViewGridCell.swift */; };
 		7A9130E32C56957900137CCE /* DefaultUserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9130E22C56957900137CCE /* DefaultUserImageView.swift */; };
-		7ABA7AD02C57ED7100CD8336 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ABA7ACF2C57ED7000CD8336 /* config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3184CC2C58D6A0004946E2 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		7A3E83CF2C539AD800647F83 /* taqtile-ios-trainee-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "taqtile-ios-trainee-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3E83D22C539AD800647F83 /* taqtile_ios_trainee_taskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taqtile_ios_trainee_taskApp.swift; sourceTree = "<group>"; };
 		7A3E83D42C539AD800647F83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		7A9130DA2C5584CE00137CCE /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		7A9130DC2C55B3C800137CCE /* ImageViewGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewGridCell.swift; sourceTree = "<group>"; };
 		7A9130E22C56957900137CCE /* DefaultUserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserImageView.swift; sourceTree = "<group>"; };
-		7ABA7ACF2C57ED7000CD8336 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = ../../../config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 				7A3E83E32C53D81B00647F83 /* ViewModels */,
 				7A3E83D62C539ADF00647F83 /* Assets.xcassets */,
 				7A4613172C57DDB9007865CD /* Localizable.xcstrings */,
-				7ABA7ACF2C57ED7000CD8336 /* config.plist */,
+				7A3184CC2C58D6A0004946E2 /* config.plist */,
 				7A3E83D82C539ADF00647F83 /* Preview Content */,
 			);
 			path = "taqtile-ios-trainee-task";
@@ -198,10 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ABA7AD02C57ED7100CD8336 /* config.plist in Resources */,
 				7A3E83DA2C539ADF00647F83 /* Preview Assets.xcassets in Resources */,
 				7A3E83D72C539ADF00647F83 /* Assets.xcassets in Resources */,
 				7A4613182C57DDB9007865CD /* Localizable.xcstrings in Resources */,
+				7A3184CD2C58D6A0004946E2 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
